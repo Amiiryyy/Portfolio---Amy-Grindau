@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amy Grindau - Instagram Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_darstellung2.css">
+</head>
+<body> 
+    <div class="container">
+        <div id="navigation">
+            <header> 
+                <nav>
+                    <div class="logo">
+                        Social Media 
+                    </div>
+                    <ul>
+                        <li><a href="About me.html">About Me</a></li>
+                        <li><a href="curriculum.html">My Curriculum</a></li>
+                        <li><a href="Social Media.html">Instagram</a></li>
+                        <li><a href="calculator.html">Simple Calculator</a></li>
+                        <li><a href="research.html">Other Research</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="background-container"> 
+            <div >
+                <h1>Instagram</h1>
+                <p>Instagram is a popular social networking service designed for sharing photos and videos. 
+                    Launched in 2010, it allows users to upload content, apply filters and edits, and share 
+                    their moments with followers or a wider audience. Instagram also features various interactive elements 
+                    such as stories, reels, and direct messaging, fostering connections and creativity among its diverse user base.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <h2>UI/ UX Design</h2>
+                    <p>Instagram's UI/UX design is a dynamic reflection of ever-changing trends, incorporating features like stories, reels, and the explore page. The platform's personalized experience is driven by a sophisticated algorithm, ensuring content relevance for each user.</p>
+                </div>
+                <div class="slide">
+                    <h2>Features and Functionalities</h2>
+                    <p>Instagram boasts a diverse array of features and functionalities, including the ability to like, comment, DM, tag, post, and engage in live streams. Additionally, it supports business activities with options for donations, setting up a shop, selling products, analytics, verification, polls, and the exclusive "close friends only" feature.</p>
+                </div>
+                <div class="slide">
+                    <h2>Target audience and User Demographic</h2>
+                    <p>Initially targeting young demographics, Instagram has evolved to attract a diverse audience, now catering to users of all age groups. The platform's expansion in appeal has transitioned from a focus on young individuals to encompassing a broader and more inclusive user base.</p>
+                </div>
+                <div class="slide">
+                    <h2>Monetization strategies</h2>
+                    <p>Instagram offers multiple monetization strategies, including influencer partnerships, advertisements for both personal and brand promotion, and verified accounts. These diverse avenues enable users to capitalize on their online presence and leverage Instagram for financial opportunities.</p>
+                </div>
+                <div class="slide">
+                    <h2>Privacy and security measures</h2>
+                    <p>Instagram prioritizes privacy and security with proactive measures such as reporting, blocking, the option for no comments, private account settings, and the added layer of security through two-factor authentication. However, challenges like the presence of bots, hacking risks, and concerns about data privacy within the broader Meta ecosystem highlight the ongoing need for vigilance in maintaining user security.</p>
+                </div>
+                <div class="slide">
+                    <h2>Recent update and innovations</h2>
+                    <p>In its recent updates and innovations, Instagram has introduced features like shared posts, notes, and threads, fostering more collaborative interactions. The platform has also expanded its offerings with the introduction of broadcasting channels, and a move towards paid and premium content, providing users with diverse ways to engage and share valuable content.</p>
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+         
+    
+    </div>      
+        <div id="imgIcon">
+            <a href="darstellung1.html"><img src="Icons.jpg" alt="Social Media Icons"></a>
+        </div> 
+        <div id="navigation">
+            <nav>
+                <div class="logo2">
+                    <a href="About me.html">Social Media Portfolio 2024</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+       let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) {
+        index = slides.length - 1;
+    } else if (index >= slides.length) {
+        index = 0;
+    }
+    
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+    
+    // Show the slide at the specified index
+    slides[index].style.display = 'block';
+
+    slideIndex = index;
+}
+
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(slideIndex - 1);
+}
+
+// Initial function call to display the first slide
+showSlide(slideIndex);
+
+        function updateGradient(event) {
+            const x = event.clientX / window.innerWidth;
+            const y = event.clientY / window.innerHeight;
+            const gradientColor = `linear-gradient(to right, rgba(255, 0, 0, ${x}), rgba(0, 0, 255, ${y}))`;
+            document.querySelector('.background-container').style.background = gradientColor;
+        }
+
+        document.addEventListener('mousemove', updateGradient);
+    </script>
+</body>
+</html>

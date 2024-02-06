@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Grindau - Curriculum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_darstellung1.css">
+</head>
+<body> 
+    
+    <div class="container">
+        <div id="navigation">
+            <header> 
+                <nav>
+                    <div class="logo">
+                        Social Media 
+                    </div>
+                    <ul>
+                        <li><a href="About me.html">About Me</a></li>
+                        <li><a href="curriculum.html">My Curriculum</a></li>
+                        <li><a href="Social Media.html">Instagram</a></li>
+                        <li><a href="calculator.html">Simple Calculator</a></li>
+                        <li><a href="research.html">Other Research</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="content">
+            <div class="background-container">
+                <h1>Timetable</h1>
+        
+                <div style="text-align: center;">
+                    <img src="HW2.png" alt="MY Curriculum" style="width: 100%; max-width: 1400px; height: auto;">
+    
+                </div>
+            </div>
+        </div>
+           
+        <div id="imgIcon">
+            <a href="darstellung1.html"><img src="Icons.jpg" alt="Social Media Icons"></a>
+        </div>
+
+        <div id="navigation">
+            <nav>
+                <div class="logo2">
+                    <a href="About me.html">Social Media Portfolio 2024</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        function updateGradient(event) {
+            const x = event.clientX / window.innerWidth;
+            const y = event.clientY / window.innerHeight;
+            const gradientColor = `linear-gradient(to right, rgba(255, 0, 0, ${x}), rgba(0, 0, 255, ${y}))`;
+            document.querySelector('.background-container').style.background = gradientColor;
+        }
+        document.addEventListener('mousemove', updateGradient);
+    </script>
+     
+</body>
+</html>

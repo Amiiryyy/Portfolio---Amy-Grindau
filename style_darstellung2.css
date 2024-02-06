@@ -1,0 +1,38 @@
+.slideshow-container {
+    display: flex;
+    overflow-x: hidden; /* Hide overflow to ensure only one slide is visible at a time */
+    width: 100%;
+    position: relative; /* Add relative positioning to position the arrows relative to the slider */
+}
+
+.slide {
+    flex: 0 0 auto; /* Allow flexibility in sizing */
+    width: 100%; /* Ensure slides take full width of container */
+    padding: 50px;
+    box-sizing: border-box;
+    display: none; /* Hide all slides initially */
+}
+
+.slide:first-child {
+    display: block; /* Display the first slide initially */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Position relative to the slideshow container */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
